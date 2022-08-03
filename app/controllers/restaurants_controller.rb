@@ -31,7 +31,23 @@ class RestaurantsController < ApplicationController
         delete_restaurant.to_json
     end
 
+    patch '/restaurants/:id' do
+        patch_restaurant = Restaurant.find(params[:id])
+        patch_restaurant.update(
+            params
+            # price: params[:price]
+        )
+        patch_restaurant.to_json
+    end
 
+    # patch '/reviews/:id' do
+    #     review = Review.find(params[:id])
+    #     review.update(
+    #       score: params[:score],
+    #       comment: params[:comment]
+    #     )
+    #     review.to_json
+    #   end
     # private
 
     # def restaurant_params
