@@ -63,11 +63,5 @@ puts "Creating Liquors..."
     )
 end
 
-o1 = Order.create(quantity: 1)
-o2 = Order.create(quantity: 1)
-o3 = Order.create(quantity: 1)
-o4 = Order.create(quantity: 1)
-o5 = Order.create(quantity: 1)
-o6 = Order.create(quantity: 1)
 
 puts "✅ Done seeding!"

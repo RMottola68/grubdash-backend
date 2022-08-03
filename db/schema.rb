@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 2022_08_03_213458) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.string "name"
+    t.string "price"
     t.integer "quantity"
   end
 
