@@ -8,7 +8,7 @@ Liquor.destroy_all
 puts "Creating Restaurants..."
 edmunds_steakhouse = Restaurant.create(name: "Edmund's Steakhouse", rating: "★★★★★", city: "NYC", price: "★★★★")
 ryans_chophouse = Restaurant.create(name: "Ryan's Chophouse", rating: "★★★★", city: "Fresh Meadows", price: "★★★★★")
-chases_tacos = Restaurant.create(name: "Taco Hub", rating: "★★", city: "Seattle", price: "★★")
+chases_tacos = Restaurant.create(name: "Chase's Bussin' Ass Tacos", rating: "★★", city: "Seattle", price: "★★")
 lanis_diner = Restaurant.create(name: "Lani's Diner", rating: "★★★★", city: "Seattle", price: "★★★")
 chicken_spot = Restaurant.create(name: "Chicken Spot", rating: "★★★", city: "Los Angeles", price: "★★")
 bon_agneau = Restaurant.create(name: "Bon Agneau", rating: "★★★★", city: "Louisiana", price: "★★★★")
@@ -27,14 +27,14 @@ puts "Creating Menus..."
     # )
     # rest_id += 1
 # end
-    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: edmunds_steakhouse.id)
-    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: ryans_chophouse.id)
-    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: chases_tacos.id)
-    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: lanis_diner.id)
-    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: chicken_spot.id)
-    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: bon_agneau.id)
-    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: gian_carlos.id)
-    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: yalleys_restaurant.id)
+    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: edmunds_steakhouse.id, order_id: 1)
+    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: ryans_chophouse.id, order_id: 1)
+    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: chases_tacos.id, order_id: 1)
+    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: lanis_diner.id, order_id: 1)
+    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: chicken_spot.id, order_id: 1)
+    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: bon_agneau.id, order_id: 1)
+    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: gian_carlos.id, order_id: 1)
+    Menu.create(cuisine: Faker::Food.ethnic_category, restaurant_id: yalleys_restaurant.id, order_id: 1)
 
 
 puts "Creating Meals..."
@@ -45,7 +45,8 @@ puts "Creating Meals..."
         rating: "★".*(rand(1..5)), 
         restaurant_id: rand(1..8),
         menu_id: rand(1..8),
-        description: Faker::Food.description
+        description: Faker::Food.description,
+        order_id: 1
     )
 end
 
@@ -57,8 +58,16 @@ puts "Creating Liquors..."
         price: rand(1..14),
         brand: Faker::Beer.brand,
         restaurant_id: rand(1..8),
-        menu_id: rand(1..8)
+        menu_id: rand(1..8),
+        order_id: 1
     )
 end
+
+o1 = Order.create(quantity: 1)
+o2 = Order.create(quantity: 1)
+o3 = Order.create(quantity: 1)
+o4 = Order.create(quantity: 1)
+o5 = Order.create(quantity: 1)
+o6 = Order.create(quantity: 1)
 
 puts "✅ Done seeding!"

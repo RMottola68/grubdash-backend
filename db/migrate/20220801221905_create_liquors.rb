@@ -6,6 +6,7 @@ class CreateLiquors < ActiveRecord::Migration[6.1]
       t.string :brand
       t.integer :restaurant_id
       t.integer :menu_id
+      t.integer :order_id
     end
   end
 end

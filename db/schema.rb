@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_01_221905) do
+ActiveRecord::Schema.define(version: 2022_08_03_213458) do
 
   create_table "liquors", force: :cascade do |t|
     t.integer "price"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2022_08_01_221905) do
     t.string "brand"
     t.integer "restaurant_id"
     t.integer "menu_id"
+    t.integer "order_id"
   end
 
   create_table "meals", force: :cascade do |t|
@@ -27,11 +28,17 @@ ActiveRecord::Schema.define(version: 2022_08_01_221905) do
     t.integer "restaurant_id"
     t.integer "menu_id"
     t.string "description"
+    t.integer "order_id"
   end
 
   create_table "menus", force: :cascade do |t|
     t.string "cuisine"
     t.integer "restaurant_id"
+    t.integer "order_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "quantity"
   end
 
   create_table "restaurants", force: :cascade do |t|

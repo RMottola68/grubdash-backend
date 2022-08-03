@@ -7,6 +7,7 @@ class CreateMeals < ActiveRecord::Migration[6.1]
       t.integer :restaurant_id
       t.integer :menu_id
       t.string :description
+      t.integer :order_id
     end
   end
 end
