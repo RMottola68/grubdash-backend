@@ -1,9 +1,12 @@
 class OrdersController < ApplicationController
+    # .to_jason(include: :meals)
     get "/orders" do
         orders = Order.all
         orders.to_json
     end
    
+    
+
     #creates a restaurant
     post "/orders" do
         post_order = Order.create(params)
