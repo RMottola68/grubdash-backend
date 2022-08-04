@@ -6,12 +6,12 @@ class RestaurantsController < ApplicationController
     end
 
     get "/restaurants/:id/menu" do
-        restaurant_menu = Restaurant.get_restaurant_id(params[:id].to_i).menu
+        restaurant_menu = Restaurant.find(params[:id]).menu
         restaurant_menu.to_json
     end
    
     get "/restaurants/:id/menu/meals" do
-        menu = Restaurant.get_restaurant_id(params[:id]).menu.meals
+        menu = Restaurant.find(params[:id]).menu.meals
         menu.to_json
     end
 
