@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
-    # .to_jason(include: :meals)
+    
     get "/orders" do
         orders = Order.all
-        orders.to_json
+        orders.to_json(include: :meals)
     end
    
     
