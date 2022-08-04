@@ -11,7 +11,7 @@ class RestaurantsController < ApplicationController
     end
    
     get "/restaurants/:id/menu/meals" do
-        menu = Restaurant.get_restaurant_id(params[:id].to_i).menu.meals
+        menu = Restaurant.get_restaurant_id(params[:id]).menu.meals
         menu.to_json
     end
 
