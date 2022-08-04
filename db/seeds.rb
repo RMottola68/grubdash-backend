@@ -2,7 +2,6 @@ puts "Deleting Restaurant/Meal/Menu/Liquor data..."
 Restaurant.destroy_all
 Meal.destroy_all
 Menu.destroy_all
-Liquor.destroy_all
 
 
 puts "Creating Restaurants..."
@@ -50,18 +49,6 @@ puts "Creating Meals..."
     )
 end
 
-puts "Creating Liquors..."
-
-40.times do
-    Liquor.create(
-        name: Faker::Beer.name,
-        price: rand(1..14),
-        brand: Faker::Beer.brand,
-        restaurant_id: rand(1..8),
-        menu_id: rand(1..8),
-        order_id: 1
-    )
-end
 
 
 puts "✅ Done seeding!"

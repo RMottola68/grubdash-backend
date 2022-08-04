@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2022_08_03_213458) do
 
-  create_table "liquors", force: :cascade do |t|
-    t.integer "price"
-    t.string "name"
-    t.string "brand"
-    t.integer "restaurant_id"
-    t.integer "menu_id"
-    t.integer "order_id"
-  end
-
   create_table "meals", force: :cascade do |t|
     t.integer "price"
     t.string "name"
