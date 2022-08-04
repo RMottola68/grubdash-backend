@@ -22,9 +22,7 @@ class OrdersController < ApplicationController
     # updates the price attribute
     patch '/orders/:id' do
         patch_order = Order.find(params[:id])
-        patch_order.update(
-            params
-        )
+        patch_order.update(params)
         patch_order.to_json
     end
 end
