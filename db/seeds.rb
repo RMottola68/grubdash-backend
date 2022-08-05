@@ -5,9 +5,9 @@ Menu.destroy_all
 
 
 puts "Creating Restaurants..."
-edmunds_steakhouse = Restaurant.create(name: "Edmund's Steakhouse", rating: "★★★★★", city: "NYC", price: "★★★★")
+edmunds_steakhouse = Restaurant.create(name: "Ed's Steakhouse", rating: "★★★★★", city: "NYC", price: "★★★★")
 ryans_chophouse = Restaurant.create(name: "Ryan's Chophouse", rating: "★★★★", city: "Fresh Meadows", price: "★★★★★")
-chases_tacos = Restaurant.create(name: "Chase's Bussin' Ass Tacos", rating: "★★", city: "Seattle", price: "★★")
+chases_tacos = Restaurant.create(name: "Chase's Tacos", rating: "★★", city: "Seattle", price: "★★")
 lanis_diner = Restaurant.create(name: "Lani's Diner", rating: "★★★★", city: "Seattle", price: "★★★")
 chicken_spot = Restaurant.create(name: "Chicken Spot", rating: "★★★", city: "Los Angeles", price: "★★")
 bon_agneau = Restaurant.create(name: "Bon Agneau", rating: "★★★★", city: "Louisiana", price: "★★★★")
