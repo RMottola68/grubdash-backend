@@ -5,14 +5,14 @@ Menu.destroy_all
 
 
 puts "Creating Restaurants..."
-edmunds_steakhouse = Restaurant.create(name: "Ed's Steakhouse", rating: "★★★★★", city: "NYC", price: "★★★★")
-ryans_chophouse = Restaurant.create(name: "Ryan's Chophouse", rating: "★★★★", city: "Fresh Meadows", price: "★★★★★")
-chases_tacos = Restaurant.create(name: "Chase's Tacos", rating: "★★", city: "Seattle", price: "★★")
-lanis_diner = Restaurant.create(name: "Lani's Diner", rating: "★★★★", city: "Seattle", price: "★★★")
-chicken_spot = Restaurant.create(name: "Chicken Spot", rating: "★★★", city: "Los Angeles", price: "★★")
-bon_agneau = Restaurant.create(name: "Bon Agneau", rating: "★★★★", city: "Louisiana", price: "★★★★")
-gian_carlos = Restaurant.create(name: "Gian Carlos", rating: "★★★★★", city: "Atlanta", price: "★★★★★")
-yalleys_restaurant = Restaurant.create(name: "Yalleys Restaurant", rating: "★★★★", city: "Atlanta", price: "★★★")
+edmunds_steakhouse = Restaurant.create(name: "Ed's Steakhouse", rating: "★★★★★", city: "NYC", price: "$$$$")
+ryans_chophouse = Restaurant.create(name: "Ryan's Chophouse", rating: "★★★★", city: "Fresh Meadows", price: "$$$$$")
+chases_tacos = Restaurant.create(name: "Chase's Bussin Ass Tacos", rating: "★★★★★", city: "Tejas", price: "$$$$$")
+lanis_diner = Restaurant.create(name: "Lani's Diner", rating: "★★★★", city: "Seattle", price: "$$$")
+chicken_spot = Restaurant.create(name: "Chicken Spot", rating: "★★★", city: "Los Angeles", price: "$$")
+bon_agneau = Restaurant.create(name: "Bon Agneau", rating: "★★★★", city: "Louisiana", price: "$$$$")
+gian_carlos = Restaurant.create(name: "Gian Carlos", rating: "★★★★★", city: "Atlanta", price: "$$$$$")
+yalleys_restaurant = Restaurant.create(name: "Yalleys Restaurant", rating: "★★★★", city: "Atlanta", price: "$$$")
 
 
 puts "Creating Menus..."
@@ -45,7 +45,8 @@ puts "Creating Meals..."
         restaurant_id: rand(1..8),
         menu_id: rand(1..8),
         description: Faker::Food.description,
-        order_id: 1
+        order_id: 1,
+        image_url: "https://content.time.com/time/photoessays/2010/top10_feasts/peter_pan.jpg"
     )
 end
 

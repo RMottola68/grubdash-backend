@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2022_08_03_213458) do
     t.integer "menu_id"
     t.string "description"
     t.integer "order_id"
+    t.string "image_url"
   end
 
   create_table "menus", force: :cascade do |t|
